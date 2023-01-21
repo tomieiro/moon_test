@@ -1,36 +1,56 @@
-# LTest
-Lua module to provide unit tests methods.
+# Lua LTest Framework
 
+LTest is a unit testing framework for Lua. It is designed to be simple and
+easy to use. It is also designed to be used in a variety of environments,
+including embedded systems.
 
-To build unit tests, just import the module and use tests as shown below:
+## Features
 
-```lua
+* Simple and easy to use
+* Supports Lua 5.1, 5.2, 5.3, and LuaJIT
 
-lt = require("ltest");
+## Installation
 
-lt.test("variable_test", function()
-    b = 2;
-    assertEquals(b, 2);
-    assertTrue(b ~= 3);
-end
-)
-```
-And is returned:
-```lua
-    [ test: variable_test ] - Passed: true 
-    [ test: variable_test ] - Passed: true 
+1. Clone the GitHub repository.
+
+```bash
+git clone https://github.com/shawnjb/ltest.git
 ```
 
-For now, module contains three verifications:
+2. Use `luarocks` to install the package.
 
-- assertTrue(cond);
-    - Where cond is a conditional to assert.
+```bash
+cd ltest
+luarocks make
+```
 
-- assertFalse(cond);
-    - Where cond is a conditional to assert.
+## Usage
 
-- assertEquals(a, b);
-    - Where a and b are objects to compare.
+1. Create a test file.
 
+```lua
+local ltest = require("ltest")
+local suite = ltest.suite("ltest")
 
-**More documentation comming soon...**
+suite:add("test", function()
+    assert(true)
+end)
+
+suite:add("test", function()
+    assert(false)
+end)
+
+suite:run()
+suite:print()
+```
+
+2. Run the test file.
+
+```bash
+lua test.lua
+```
+
+## License
+
+LTest is licensed under the MIT license. See the LICENSE file for more
+information.
