@@ -39,7 +39,7 @@ function LTest.test(test_name, f)
         if(type(bool) ~= "boolean") then
             error("Invalid conditional",2);
         end
-        meta:__addTest(assert(~bool, "\27[41mCondition failed : Expected false, but returned true on:\27[0m \27[35m" .. test_name .. "\27[0m", 2));
+        meta:__addTest(assert(not bool, "\27[41mCondition failed : Expected false, but returned true on:\27[0m \27[35m" .. test_name .. "\27[0m", 2));
     end
 
     function assertEquals(arg1, arg2)
