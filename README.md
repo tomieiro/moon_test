@@ -1,3 +1,6 @@
+[![License: Apache 2.0](https://img.shields.io/github/license/tomieiro/moon_test)](https://opensource.org/license/apache-2-0/)
+[![Luarocks](https://img.shields.io/luarocks/v/tomieiro/moon_test)](https://luarocks.org/modules/tomieiro/moon_test)
+
 # Moon-Test
 Lua module to provide unit tests methods.
 
