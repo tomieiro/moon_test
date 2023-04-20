@@ -6,7 +6,7 @@ To build unit tests, just import the module and use tests as shown below:
 
 ```lua
 
-lt = require("ltest");
+lt = require("moon_test");
 
 lt.test("variable_test", function()
     b = 2;
