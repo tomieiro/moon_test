@@ -1,4 +1,4 @@
-# LTest
+# Moon-Test
 Lua module to provide unit tests methods.
 
 
